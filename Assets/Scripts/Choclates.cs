@@ -52,9 +52,11 @@ public class Choclates : MonoBehaviour
 
     public void SetTargetItem()
     {
-        if(GameEventHub.indexForItem < _chocolatesToBuy.Count)
+        print(this.GetType().Name + " Set Target Item");
+
+        print(this.GetType().Name+" " + GameEventHub.indexForItem + " "+ _chocolatesToBuy.Count);
+        if (GameEventHub.indexForItem < _chocolatesToBuy.Count)
         {
-            print(this.GetType().Name + " Set Target Item");
             ChocolateHolder.GetComponent<SpriteRenderer>().sprite = _chocolatesToBuy[GameEventHub.indexForItem].itemSprite;
             // Data Set in Event Hub
             GameEventHub.itemCount = _chocolatesToBuy[GameEventHub.indexForItem].buyQuantity;
@@ -62,7 +64,7 @@ public class Choclates : MonoBehaviour
             GameEventHub.go.GetComponent<BoxCollider2D>().enabled = true;
             // Event Raise to set quantity of items. This quantity will be displayed at character chat box.
             EventDisplayQuantity.Raise();
-            EventJarInAnimation.Raise();
+            //EventJarInAnimation.Raise();
         }
         else
         {
@@ -147,7 +149,7 @@ public class Choclates : MonoBehaviour
             if (!_listIndex.Contains(temp))
             {
                 _listIndex.Add(temp);
-                print(this.GetType().Name + " index " + temp);
+//                print(this.GetType().Name + " index " + temp);
             }
         }
         return _listIndex;

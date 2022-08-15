@@ -3,9 +3,7 @@ using TMPro;
 
 public class ItemCountUpdater : MonoBehaviour
 {
-
-    [SerializeField]
-    TextMeshProUGUI _text;
+    TMP_Text _text;
     [SerializeField]
     GameEvent SetTargetItemEvent;
     // Listener
@@ -24,7 +22,7 @@ public class ItemCountUpdater : MonoBehaviour
     }
     private void Start()
     {
-        _text = GetComponent<TextMeshProUGUI>();
+        _text = GetComponent<TMP_Text>();
         _text.text = GameEventHub.itemCount.ToString();
         print(this.GetType().Name + " Remaining Items " + GameEventHub.itemCount);
     }
