@@ -6,7 +6,8 @@ public class MouseClick : MonoBehaviour
 {
     public GameEvent EventItemPicked;
     private void OnMouseDown()
-    {
+    { 
         EventItemPicked.Raise();
+        print(this.GetType().Name + " Event Raised");
     }
 }

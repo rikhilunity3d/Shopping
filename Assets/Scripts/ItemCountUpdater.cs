@@ -5,9 +5,9 @@ public class ItemCountUpdater : MonoBehaviour
 {
     TMP_Text _text;
     [SerializeField]
-    GameEvent SetTargetItemEvent;
+    GameEvent EventSetTargetItem;
     // Listener
-    public void DecrementItemCount()
+    public void DecrementItemQuantity()
     {
         GameEventHub.itemCount--;
         if(GameEventHub.itemCount <= 0)
@@ -15,16 +15,21 @@ public class ItemCountUpdater : MonoBehaviour
             GameEventHub.itemCount = 0;
             GameEventHub.go.GetComponent<BoxCollider2D>().enabled = false;
             GameEventHub.indexForItem++;
-            SetTargetItemEvent.Raise();
+            EventSetTargetItem.Raise();
         }
-        print(this.GetType().Name + " Remaining Items after Updates " + GameEventHub.itemCount);
+        print(this.GetType().Name + " Decrement Item Quantity " + GameEventHub.itemCount);
         _text.text = GameEventHub.itemCount.ToString();
     }
     private void Start()
     {
+        DisplayQuanitiy();
+    }
+
+    public void DisplayQuanitiy()
+    {
         _text = GetComponent<TMP_Text>();
         _text.text = GameEventHub.itemCount.ToString();
-        print(this.GetType().Name + " Remaining Items " + GameEventHub.itemCount);
+        print(this.GetType().Name + " Display Quanitiy " + GameEventHub.itemCount);
     }
 
 }

@@ -47,7 +47,13 @@ public class Choclates : MonoBehaviour
     }
     private void OnEnable()
     {
+
+        
+    }
+    private void Start()
+    {
         EventSetTargetItem.Raise();
+        print(this.GetType().Name + " On Start");
     }
 
     public void SetTargetItem()
