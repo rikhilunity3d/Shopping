@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MouseClick : MonoBehaviour
 {
-    public GameEvent ItemPickedEvent;
+    public GameEvent EventItemPicked;
     private void OnMouseDown()
     {
-        ItemPickedEvent.Raise();
+        EventItemPicked.Raise();
     }
 }

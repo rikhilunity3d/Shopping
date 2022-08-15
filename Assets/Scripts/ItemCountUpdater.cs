@@ -3,7 +3,8 @@ using TMPro;
 
 public class ItemCountUpdater : MonoBehaviour
 {
- 
+
+    [SerializeField]
     TextMeshProUGUI _text;
     [SerializeField]
     GameEvent SetTargetItemEvent;

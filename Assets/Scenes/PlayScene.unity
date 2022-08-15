@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120365242}
   - component: {fileID: 120365243}
+  - component: {fileID: 120365244}
   m_Layer: 0
   m_Name: Chocolate3
   m_TagString: Untagged
@@ -206,6 +207,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &120365244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120365241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bbf280d07d4520aa6ea1468e80ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventItemPicked: {fileID: 11400000, guid: 589a9fb3cbbb14537a55952e1836033a, type: 2}
 --- !u!1 &157756799
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157756800}
   - component: {fileID: 157756801}
+  - component: {fileID: 157756802}
   m_Layer: 0
   m_Name: Chocolate1
   m_TagString: Untagged
@@ -289,6 +304,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &157756802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157756799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bbf280d07d4520aa6ea1468e80ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventItemPicked: {fileID: 11400000, guid: 589a9fb3cbbb14537a55952e1836033a, type: 2}
 --- !u!1 &240724701
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244842614}
   - component: {fileID: 244842615}
+  - component: {fileID: 244842616}
   m_Layer: 0
   m_Name: Chocolate6
   m_TagString: Untagged
@@ -456,6 +485,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &244842616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244842613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bbf280d07d4520aa6ea1468e80ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventItemPicked: {fileID: 11400000, guid: 589a9fb3cbbb14537a55952e1836033a, type: 2}
 --- !u!1 &252906471
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379512793}
   - component: {fileID: 379512794}
+  - component: {fileID: 379512795}
   m_Layer: 0
   m_Name: Chocolate4
   m_TagString: Untagged
@@ -621,6 +664,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &379512795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379512792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bbf280d07d4520aa6ea1468e80ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventItemPicked: {fileID: 11400000, guid: 589a9fb3cbbb14537a55952e1836033a, type: 2}
 --- !u!1 &438955845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813856515}
   - component: {fileID: 813856516}
+  - component: {fileID: 813856517}
   m_Layer: 0
   m_Name: Chocolate5
   m_TagString: Untagged
@@ -1097,6 +1154,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &813856517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813856514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bbf280d07d4520aa6ea1468e80ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventItemPicked: {fileID: 11400000, guid: 589a9fb3cbbb14537a55952e1836033a, type: 2}
 --- !u!1 &814197878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1782,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1734,6 +1804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616423860}
   - component: {fileID: 1616423861}
+  - component: {fileID: 1616423862}
   m_Layer: 0
   m_Name: Chocolate2
   m_TagString: Untagged
@@ -1807,6 +1878,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1616423862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616423859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011bbf280d07d4520aa6ea1468e80ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventItemPicked: {fileID: 11400000, guid: 589a9fb3cbbb14537a55952e1836033a, type: 2}
 --- !u!1 &1644375294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +1991,7 @@ GameObject:
   - component: {fileID: 1668578125}
   - component: {fileID: 1668578124}
   - component: {fileID: 1668578126}
+  - component: {fileID: 1668578127}
   m_Layer: 0
   m_Name: ItemQuantity
   m_TagString: Untagged
@@ -2079,6 +2164,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SetTargetItemEvent: {fileID: 11400000, guid: 6d053a3b95f5f449ab385d1430afcfc6, type: 2}
+--- !u!114 &1668578127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668578122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 83d7e28d7eda94a46ae95b4ba38e1dba, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1668578126}
+        m_TargetAssemblyTypeName: ItemCountUpdater, Assembly-CSharp
+        m_MethodName: DecrementItemCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1773172753
 GameObject:
   m_ObjectHideFlags: 0
