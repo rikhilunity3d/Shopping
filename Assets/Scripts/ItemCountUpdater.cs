@@ -7,6 +7,7 @@ public class ItemCountUpdater : MonoBehaviour
     TextMeshProUGUI _text;
     [SerializeField]
     GameEvent SetTargetItemEvent;
+    // Listener
     public void DecrementItemCount()
     {
         GameEventHub.itemCount--;
