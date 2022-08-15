@@ -33,6 +33,8 @@ public class Choclates : MonoBehaviour
     public GameEvent EventDisplayQuantity;
     public GameEvent EventSetTargetItem;
     public GameEvent EventJarInAnimation;
+    public GameEvent EventJarLidInAnimation;
+    public GameEvent EventJarOutAnimation;
     public GameEvent EventLevelComplete;
 
     private void Awake()
@@ -70,7 +72,7 @@ public class Choclates : MonoBehaviour
             GameEventHub.go.GetComponent<BoxCollider2D>().enabled = true;
             // Event Raise to set quantity of items. This quantity will be displayed at character chat box.
             EventDisplayQuantity.Raise();
-            //EventJarInAnimation.Raise();
+            EventJarInAnimation.Raise();
         }
         else
         {
@@ -83,6 +85,8 @@ public class Choclates : MonoBehaviour
     public void LevelCompleted()
     {
         print(this.GetType().Name + " Level is now Completed");
+        //EventJarOutAnimation.Raise();
+        EventJarLidInAnimation.Raise();
     }
 
     private void CheckInput()
