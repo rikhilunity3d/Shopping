@@ -12,4 +12,9 @@ public static class GameEventHub
     public static int itemCount;
     public static int indexForItem = 0;
     public static GameObject go;
+
+    public static GameObject GOJarBack;
+    public static List<Vector3> pathArray = new List<Vector3>();
+
+
 }

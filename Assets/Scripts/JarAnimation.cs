@@ -6,6 +6,12 @@ using DG.Tweening;
 public class JarAnimation : MonoBehaviour
 {
     public GameEvent EventJarLidOutAnimation;
+
+    private void Start()
+    {
+        GameEventHub.GOJarBack = this.gameObject;
+    }
+
     public void JarInAnimation()
     {
         print(this.GetType().FullName + " Jar In Animation");
