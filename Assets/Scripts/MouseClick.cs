@@ -22,13 +22,13 @@ public class MouseClick : MonoBehaviour
 
         //GameEventHub.pathArray[0] = this.gameObject.transform.position;
 
-        GameEventHub.pathArray.Add(GameEventHub.GOJarBack.transform.position);
+        //GameEventHub.animationPathPoints.Add(GameEventHub.GOJarBack.transform.position);
 
-        print(this.gameObject.transform.position + " " + GameEventHub.GOJarBack.transform.position + " " + GameEventHub.pathArray.Count);
+        print(this.gameObject.transform.position + " " + GameEventHub.GOJarBack.transform.position + " " + GameEventHub.animationPathPoints.Count);
 
         childGO= GameEventHub.go.transform.GetChild(GameEventHub.indexForItem).gameObject;
 
-        childGO.transform.DOPath(GameEventHub.pathArray.ToArray(), GameEventHub.pathArray.Count, pathType)
+        childGO.transform.DOPath(GameEventHub.GetAnimationPathPoints(), GameEventHub.animationPathPoints.Count, pathType)
             .SetEase(Ease.OutQuad)
             .OnComplete(OnCompleteAnimation);
 
@@ -39,6 +39,6 @@ public class MouseClick : MonoBehaviour
         childGO.transform.parent = GameEventHub.GOJarBack.transform;
         print(this.GetType().FullName + " Play Move GameObject Animation");
             //GameEventHub.GOJarBack 
-        GameEventHub.pathArray.Clear();
+        //GameEventHub.pathArray.Clear();
     }
 }

@@ -15,7 +15,7 @@ public class Choclates : MonoBehaviour
     [SerializeField]
     int noOfChoice;
     [SerializeField]
-    List<Transform> movePoints;
+    List<GameObject> AnimationPathPoints;
     [SerializeField]
     DepartmentChocolate departmentChocolate;
     [SerializeField]
@@ -46,7 +46,20 @@ public class Choclates : MonoBehaviour
         _chocolatesToBuy = GetChocolatesFromIndex(_chocolatesIndex);
         
         AsignRandomQuantityToBuy(_chocolatesToBuy);
+
+        
     }
+
+    private void SetAnimationPathPoints(List<GameObject> animationPathPoints)
+    {
+        for(int i=0;i<animationPathPoints.Count;i++)
+        {
+            print("Animation Path Points "+ animationPathPoints[i]);
+            GameEventHub.animationPathPoints.Add(animationPathPoints[i]);
+        }
+        
+    }
+
     private void OnEnable()
     {
 
@@ -54,7 +67,9 @@ public class Choclates : MonoBehaviour
     }
     private void Start()
     {
+        SetAnimationPathPoints(AnimationPathPoints);
         EventSetTargetItem.Raise();
+        
         print(this.GetType().Name + " On Start");
     }
 
@@ -106,7 +121,7 @@ public class Choclates : MonoBehaviour
                 gameObject.transform.position = pos;
                 
                 //Instantiate(gameObject, pos, gameObject.transform.rotation);
-                _nextPos = movePoints[0];
+                //_nextPos = movePoints[0];
                 MoveGameObject(gameObject.transform);
                 
 
@@ -122,11 +137,11 @@ public class Choclates : MonoBehaviour
             if (transform.position == _nextPos.position)
             {
                 nextPosIndex++;
-                if (nextPosIndex >= movePoints.Count)
+                /*if (nextPosIndex >= movePoints.Count)
                 {
                     nextPosIndex = 0;
                     break;
-                }
+                }*/
                 //_nextPos = movePoints[nextPosIndex];
             }
             else

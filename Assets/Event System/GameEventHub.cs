@@ -14,7 +14,15 @@ public static class GameEventHub
     public static GameObject go;
 
     public static GameObject GOJarBack;
-    public static List<Vector3> pathArray = new List<Vector3>();
+    public static List<GameObject> animationPathPoints = new List<GameObject>();
 
-
+    public static Vector3[] GetAnimationPathPoints()
+    {
+        List<Vector3> animationPathPointsArray = new List<Vector3>();
+        for(int i=0;i< animationPathPoints.Count;i++)
+        {
+            animationPathPointsArray.Add(animationPathPoints[i].transform.position);
+        }
+        return animationPathPointsArray.ToArray();
+    }
 }
