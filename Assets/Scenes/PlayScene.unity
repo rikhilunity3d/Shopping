@@ -3001,7 +3001,7 @@ GameObject:
   - component: {fileID: 784897756}
   - component: {fileID: 784897755}
   m_Layer: 0
-  m_Name: Confectionary Department (with Script)
+  m_Name: Department Manager (with Script)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
