@@ -4193,7 +4193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &784897753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4207,7 +4207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelBackground: {fileID: 21300000, guid: 7bcc67161e2b34ccdb83adf9d68cd8b2, type: 3}
-  standBackground: {fileID: 0}
   ChocolateHolder: {fileID: 1456494039}
   noOfChoice: 3
   AnimationPathPoints:
@@ -4266,7 +4265,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 814197880}
-  - {fileID: 903311461}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4942,8 +4940,11 @@ GameObject:
   m_Component:
   - component: {fileID: 903311461}
   - component: {fileID: 903311462}
+  - component: {fileID: 903311464}
+  - component: {fileID: 903311463}
+  - component: {fileID: 903311465}
   m_Layer: 0
-  m_Name: RefrigerationBackground
+  m_Name: RefrigerationBackground (with Script)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4964,8 +4965,8 @@ Transform:
   - {fileID: 307248289}
   - {fileID: 2038016113}
   - {fileID: 49977986}
-  m_Father: {fileID: 784897754}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &903311462
 SpriteRenderer:
@@ -5018,6 +5019,121 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &903311463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903311460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 60f6b522cf67449fc842aa7cd63352b9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 903311464}
+        m_TargetAssemblyTypeName: Choclates, Assembly-CSharp
+        m_MethodName: LevelCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &903311464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903311460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8869337353f3d47639f258fb354231b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelBackground: {fileID: 21300000, guid: 151679e9406a04a3cba4e12642c12015, type: 3}
+  ChocolateHolder: {fileID: 984743857}
+  noOfChoice: 3
+  AnimationPathPoints:
+  - {fileID: 2038016112}
+  - {fileID: 49977985}
+  departmentChocolate:
+    departmentName: Refrigeration
+    listOfChocoloates:
+    - itemSprite: {fileID: 21300000, guid: 1757482e5ddf847719d1b7fdba04b8ff, type: 3}
+      itemName: Butter
+      itemPrice: 10
+      buyQuantity: 0
+    - itemSprite: {fileID: 21300000, guid: bc22d27c9fdce4b81a39dbf96699ea02, type: 3}
+      itemName: Milk
+      itemPrice: 3
+      buyQuantity: 0
+    - itemSprite: {fileID: 21300000, guid: e8f009915dbed4a8d80f0ac3c0177da2, type: 3}
+      itemName: Jam
+      itemPrice: 6
+      buyQuantity: 0
+    - itemSprite: {fileID: 21300000, guid: 7970399d5ed054c38bdc49a31ae8f6bd, type: 3}
+      itemName: Juice
+      itemPrice: 9
+      buyQuantity: 0
+    - itemSprite: {fileID: 21300000, guid: 559d7154b83384b439d67e0156cf19b4, type: 3}
+      itemName: Ketchup
+      itemPrice: 4
+      buyQuantity: 0
+    - itemSprite: {fileID: 21300000, guid: f1853247649d04b60a50439934674ab3, type: 3}
+      itemName: Peanut Butter
+      itemPrice: 5
+      buyQuantity: 0
+  ChocolateCompartment:
+  - {fileID: 428821882}
+  - {fileID: 2063837127}
+  - {fileID: 1646543267}
+  - {fileID: 207648114}
+  - {fileID: 192966581}
+  - {fileID: 1222088686}
+  ChocolateSinglePrefab: []
+  EventDisplayQuantity: {fileID: 11400000, guid: 83d7e28d7eda94a46ae95b4ba38e1dba, type: 2}
+  EventSetTargetItem: {fileID: 11400000, guid: 6d053a3b95f5f449ab385d1430afcfc6, type: 2}
+  EventJarInAnimation: {fileID: 11400000, guid: da9bc7b98818847a1b0a66de0d59c891, type: 2}
+  EventJarLidInAnimation: {fileID: 11400000, guid: ca80cf9dd10c4441bb8634e0da8e7bae, type: 2}
+  EventJarOutAnimation: {fileID: 11400000, guid: 20c7f02426b2a4604909d41fe271d713, type: 2}
+  EventLevelComplete: {fileID: 11400000, guid: 60f6b522cf67449fc842aa7cd63352b9, type: 2}
+--- !u!114 &903311465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903311460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6d053a3b95f5f449ab385d1430afcfc6, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 903311464}
+        m_TargetAssemblyTypeName: Choclates, Assembly-CSharp
+        m_MethodName: SetTargetItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &919141238
 GameObject:
   m_ObjectHideFlags: 0

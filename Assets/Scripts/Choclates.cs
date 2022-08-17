@@ -9,8 +9,6 @@ public class Choclates : MonoBehaviour
     [SerializeField]
     Sprite levelBackground;
     [SerializeField]
-    Sprite standBackground;
-    [SerializeField]
     SpriteRenderer ChocolateHolder;
     [SerializeField]
     int noOfChoice;
