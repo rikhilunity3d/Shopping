@@ -7,28 +7,27 @@ public class MouseClick : MonoBehaviour
 {
     PathType pathType = PathType.CatmullRom;
     public GameEvent EventItemPicked;
+    public GameEvent EventDecrementItemQuantity;
     GameObject childGO;
 
     private void OnMouseDown()
     {
-        GameEventHub.go = this.gameObject;
-        EventItemPicked.Raise();
-        print(this.GetType().Name +" "+ this.gameObject.name + " Event Raised");
+        Debug.Log("OnMouseDown");
+        print(this.GetType().Name + " " + GameEventHub.go.name + " Event Raised");
+        this.EventItemPicked.Raise();
     }
 
-    
+    private void OnMouseUp()
+    {
+        Debug.Log("OnMouseUp");
+        EventDecrementItemQuantity.Raise();   
+    }
     public void MoveGameObjectAnimation()
     {
 
-        //GameEventHub.pathArray[0] = this.gameObject.transform.position;
+        this.childGO = GameEventHub.go.transform.GetChild(GameEventHub.itemCount).gameObject;
 
-        //GameEventHub.animationPathPoints.Add(GameEventHub.GOJarBack.transform.position);
-
-        print(this.gameObject.transform.position + " " + GameEventHub.GOJarBack.transform.position + " " + GameEventHub.animationPathPoints.Count);
-
-        childGO= GameEventHub.go.transform.GetChild(GameEventHub.indexForItem).gameObject;
-
-        childGO.transform.DOPath(GameEventHub.GetAnimationPathPoints(), GameEventHub.animationPathPoints.Count, pathType)
+        this.childGO.transform.DOPath(GameEventHub.GetAnimationPathPoints(), GameEventHub.animationPathPoints.Count, this.pathType)
             .SetEase(Ease.OutQuad)
             .OnComplete(OnCompleteAnimation);
 
@@ -36,9 +35,8 @@ public class MouseClick : MonoBehaviour
 
     void OnCompleteAnimation()
     {
-        childGO.transform.parent = GameEventHub.GOJarBack.transform;
-        print(this.GetType().FullName + " Play Move GameObject Animation");
-            //GameEventHub.GOJarBack 
-        //GameEventHub.pathArray.Clear();
+        this.childGO.transform.parent = GameEventHub.GOJarBack.transform;
+        
+        
     }
 }

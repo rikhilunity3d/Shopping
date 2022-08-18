@@ -10,16 +10,17 @@ public class ItemCountUpdater : MonoBehaviour
     public void DecrementItemQuantity()
     {
         GameEventHub.itemCount--;
-        if(GameEventHub.itemCount <= 0)
+        print(this.GetType().Name + " Decrement Item Quantity " + GameEventHub.itemCount);
+        _text.text = GameEventHub.itemCount.ToString();
+        if (GameEventHub.itemCount <=0)
         {
-            GameEventHub.itemCount = 0;
+            GameEventHub.go.GetComponent<EventListener>().enabled = false;
             GameEventHub.go.GetComponent<BoxCollider2D>().enabled = false;
             GameEventHub.indexForItem++;
             EventSetTargetItem.Raise();
         }
-        print(this.GetType().Name + " Decrement Item Quantity " + GameEventHub.itemCount);
-        _text.text = GameEventHub.itemCount.ToString();
     }
+
     private void Start()
     {
         DisplayQuanitiy();
