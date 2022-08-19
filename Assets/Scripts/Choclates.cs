@@ -9,61 +9,44 @@ public class Choclates : MonoBehaviour
     [SerializeField]
     Sprite levelBackground;
     [SerializeField]
-    Sprite standBackground;
-    [SerializeField]
     SpriteRenderer ChocolateHolder;
     [SerializeField]
     int noOfChoice;
+    [SerializeField]
+    [Range(1, 10)]
+    int MaximumQuantityToBuy;
     [SerializeField]
     List<GameObject> AnimationPathPoints;
     [SerializeField]
     DepartmentChocolate departmentChocolate;
     [SerializeField]
     List<GameObject> ChocolateCompartment;
-    [SerializeField]
-    List<GameObject> ChocolateSinglePrefab;
     #endregion
 
+    #region Non - SerializeFields
     List<int> _chocolatesIndex;
     List<ItemChocolate> _chocolatesToBuy;
-    Transform _nextPos;
-    int nextPosIndex=0;
+    #endregion
 
-    
+    #region Game Events
     public GameEvent EventDisplayQuantity;
     public GameEvent EventSetTargetItem;
     public GameEvent EventJarInAnimation;
     public GameEvent EventJarLidInAnimation;
     public GameEvent EventJarOutAnimation;
     public GameEvent EventLevelComplete;
+    #endregion
 
-    private void Awake()
+    
+    private void OnEnable()
     {
         SetCameraOrthographicSize();
 
         _chocolatesIndex = GetIndexsForChoice(noOfChoice);
 
         _chocolatesToBuy = GetChocolatesFromIndex(_chocolatesIndex);
-        
+
         AsignRandomQuantityToBuy(_chocolatesToBuy);
-
-        
-    }
-
-    private void SetAnimationPathPoints(List<GameObject> animationPathPoints)
-    {
-        for(int i=0;i<animationPathPoints.Count;i++)
-        {
-            print("Animation Path Points "+ animationPathPoints[i]);
-            GameEventHub.animationPathPoints.Add(animationPathPoints[i]);
-        }
-        
-    }
-
-    private void OnEnable()
-    {
-
-        
     }
     private void Start()
     {
@@ -73,11 +56,21 @@ public class Choclates : MonoBehaviour
         print(this.GetType().Name + " On Start");
     }
 
+    private void SetAnimationPathPoints(List<GameObject> animationPathPoints)
+    {
+        for (int i = 0; i < animationPathPoints.Count; i++)
+        {
+            print("Animation Path Points " + animationPathPoints[i]);
+            GameEventHub.animationPathPoints.Add(animationPathPoints[i]);
+        }
+
+    }
+
     public void SetTargetItem()
     {
         print(this.GetType().Name + " Set Target Item");
 
-        print(this.GetType().Name+" " + GameEventHub.indexForItem + " "+ _chocolatesToBuy.Count);
+        print(this.GetType().Name+" IndexForItem " + GameEventHub.indexForItem + " ItemQuantity "+ _chocolatesToBuy.Count);
         if (GameEventHub.indexForItem < _chocolatesToBuy.Count)
         {
             ChocolateHolder.GetComponent<SpriteRenderer>().sprite = _chocolatesToBuy[GameEventHub.indexForItem].itemSprite;
@@ -85,6 +78,7 @@ public class Choclates : MonoBehaviour
             GameEventHub.itemCount = _chocolatesToBuy[GameEventHub.indexForItem].buyQuantity;
             GameEventHub.go = ChocolateCompartment[_chocolatesIndex[GameEventHub.indexForItem]].gameObject;
             GameEventHub.go.GetComponent<BoxCollider2D>().enabled = true;
+            GameEventHub.go.GetComponent<EventListener>().enabled = true;
             // Event Raise to set quantity of items. This quantity will be displayed at character chat box.
             EventDisplayQuantity.Raise();
             EventJarInAnimation.Raise();
@@ -104,61 +98,12 @@ public class Choclates : MonoBehaviour
         EventJarLidInAnimation.Raise();
     }
 
-    private void CheckInput()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pos.z = 0.0f;
-            RaycastHit2D hit = Physics2D.Raycast(pos, Vector3.zero);
-
-            if (hit && hit.collider != null)
-            {
-                print(hit.transform.gameObject.name);
-                GameObject gameObject = new GameObject();
-                gameObject.AddComponent<SpriteRenderer>().sprite = _chocolatesToBuy[0].itemSprite;
-                gameObject.GetComponent<SpriteRenderer>().sortingOrder = 300;
-                gameObject.transform.position = pos;
-                
-                //Instantiate(gameObject, pos, gameObject.transform.rotation);
-                //_nextPos = movePoints[0];
-                MoveGameObject(gameObject.transform);
-                
-
-            }
-        }
-    }
-
-    void MoveGameObject(Transform transform)
-    {
-        while(true)
-        {
-            print(transform.position);
-            if (transform.position == _nextPos.position)
-            {
-                nextPosIndex++;
-                /*if (nextPosIndex >= movePoints.Count)
-                {
-                    nextPosIndex = 0;
-                    break;
-                }*/
-                //_nextPos = movePoints[nextPosIndex];
-            }
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, _nextPos.position, 1 * Time.deltaTime);
-                print("After");
-                print(_nextPos.position);
-                print(transform.position);
-            }
-        }
-        
-    }
+    
     private void AsignRandomQuantityToBuy(List<ItemChocolate> chocolatesToBuy)
     {
         for (int i =0;i< chocolatesToBuy.Count;i++)
         {
-            int temp = UnityEngine.Random.Range(1, 8);
+            int temp = UnityEngine.Random.Range(1, MaximumQuantityToBuy);
             chocolatesToBuy[i].buyQuantity = temp;
         }
         PrintData(chocolatesToBuy);

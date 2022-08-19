@@ -16,6 +16,8 @@ public static class GameEventHub
     public static GameObject GOJarBack;
     public static List<GameObject> animationPathPoints = new List<GameObject>();
 
+    static int printId=0;
+
     public static Vector3[] GetAnimationPathPoints()
     {
         List<Vector3> animationPathPointsArray = new List<Vector3>();
@@ -24,5 +26,11 @@ public static class GameEventHub
             animationPathPointsArray.Add(animationPathPoints[i].transform.position);
         }
         return animationPathPointsArray.ToArray();
+    }
+
+    public static void Print(System.Type type, string str)
+    {
+        printId++;
+        Debug.Log(printId.ToString() + ":" + " Script Name: " + type.Name + " -> " + str);
     }
 }
