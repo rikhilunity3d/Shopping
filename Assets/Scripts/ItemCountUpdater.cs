@@ -10,7 +10,7 @@ public class ItemCountUpdater : MonoBehaviour
     public void DecrementItemQuantity()
     {
         GameEventHub.itemCount--;
-        print(this.GetType().Name + " Decrement Item Quantity " + GameEventHub.itemCount);
+        GameEventHub.Print(this.GetType(), " Decrement Item Quantity " + GameEventHub.itemCount);
         _text.text = GameEventHub.itemCount.ToString();
         if (GameEventHub.itemCount <=0)
         {
@@ -30,7 +30,8 @@ public class ItemCountUpdater : MonoBehaviour
     {
         _text = GetComponent<TMP_Text>();
         _text.text = GameEventHub.itemCount.ToString();
-        print(this.GetType().Name + " Display Quanitiy " + GameEventHub.itemCount);
+        GameEventHub.Print(this.GetType()," Display Quanitiy " + GameEventHub.itemCount);
+        
     }
 
 }

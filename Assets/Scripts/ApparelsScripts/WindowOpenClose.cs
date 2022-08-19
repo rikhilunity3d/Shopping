@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(EventListener))]
@@ -12,6 +11,10 @@ public class WindowOpenClose : MonoBehaviour
     {
         GameEventHub.Print(this.GetType(), "Window Open Function Call");
         // Animation In
+        GameEventHub.Print(this.GetType(), " Window Open Animation");
+        this.transform.DOMove(new Vector3(4.5f, 0f, 0), 2f)
+        .SetEase(Ease.OutQuad);
+        
     }
 
     // Listen to Mouse Down Event of its Inner Item like a t-shirt of Top
@@ -20,5 +23,8 @@ public class WindowOpenClose : MonoBehaviour
     {
         GameEventHub.Print(this.GetType(), "Window Close Function Call");
         // Animation Out
+        GameEventHub.Print(this.GetType()," Window Close Animation");
+        this.transform.DOMove(new Vector3(20f, 0f, 0), 2f)
+        .SetEase(Ease.OutQuad);
     }
 }

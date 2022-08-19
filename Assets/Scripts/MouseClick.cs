@@ -12,14 +12,14 @@ public class MouseClick : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("OnMouseDown");
-        print(this.GetType().Name + " " + GameEventHub.go.name + " Event Raised");
+        GameEventHub.Print(this.GetType()," OnMouseDown");
+        GameEventHub.Print(this.GetType() , GameEventHub.go.name + " Event Raised");
         this.EventItemPicked.Raise();
     }
 
     private void OnMouseUp()
     {
-        Debug.Log("OnMouseUp");
+        GameEventHub.Print(this.GetType(), " OnMouseUp");
         EventDecrementItemQuantity.Raise();   
     }
     public void MoveGameObjectAnimation()
