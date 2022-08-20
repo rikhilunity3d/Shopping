@@ -10,10 +10,13 @@ public class SetCameraOrthographicSizeAccordingToBackground : MonoBehaviour
     private void Awake()
     {
         Background = GetComponent<SpriteRenderer>().sprite;
+        GameEventHub.Print(this.GetType(), " Awake "+Background.name);
     }
-    private void OnEnable()
+    private void Start()
     {
-        EventSetCameraOrthographicSize?.Raise();
+        GameEventHub.Print(this.GetType(), "OnStart");
+        EventSetCameraOrthographicSize.Raise();
+        GameEventHub.Print(this.GetType(), "EventSetCameraOrthographicSize Event Raised");
     }
     // This function SetCameraOrthographicSize() will make sure our background
     // image width completely cover in camera. Height will be compromise
@@ -21,15 +24,18 @@ public class SetCameraOrthographicSizeAccordingToBackground : MonoBehaviour
     // an event.
     public void SetCameraOrthographicSize()
     {
+        GameEventHub.Print(this.GetType(), Background.name);
         Camera.main.orthographicSize = Background.bounds.size.y / 2 * (GetTargetRatio() / GetScreenRatio());
         GameEventHub.Print(this.GetType(), "Set Camera Orthographic Size Function Call");
     }
     float GetScreenRatio()
     {
-        return (float)Screen.width / (float)Screen.height; ;
+        GameEventHub.Print(this.GetType(), " GetScreenRatio " + ((float)Screen.width / (float)Screen.height).ToString());
+        return (float)Screen.width / (float)Screen.height;
     }
     float GetTargetRatio()
     {
-        return Background.bounds.size.x / Background.bounds.size.y;
+        GameEventHub.Print(this.GetType(), " GetTargetRatio " + ((float)Background.bounds.size.x / (float)Background.bounds.size.y).ToString());
+        return (float)Background.bounds.size.x / (float)Background.bounds.size.y;
     }
 }
