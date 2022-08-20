@@ -5,6 +5,7 @@ using UnityEngine;
 //GameEventHub class is only Data Container
 public static class GameEventHub
 {
+    static int printId = 0;
     //  update each player score individually
     //  Handle different points per block
     //  Remove the need to hard reference the players
@@ -16,7 +17,10 @@ public static class GameEventHub
     public static GameObject GOJarBack;
     public static List<GameObject> animationPathPoints = new List<GameObject>();
 
-    static int printId=0;
+    #region ApparelsStage
+    public static int id;
+    public static List<GameObject> listOfGameObject = new List<GameObject>();
+    #endregion
 
     public static Vector3[] GetAnimationPathPoints()
     {
