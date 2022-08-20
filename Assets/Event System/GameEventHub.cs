@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine;
 public static class GameEventHub
 {
     static int printId = 0;
+
     //  update each player score individually
     //  Handle different points per block
     //  Remove the need to hard reference the players
@@ -36,5 +38,7 @@ public static class GameEventHub
     {
         printId++;
         Debug.Log(printId.ToString() + ":" + " Script Name: " + type.Name + " -> " + str);
+
     }
+
 }

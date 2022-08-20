@@ -14,7 +14,14 @@ public class WindowOpenClose : MonoBehaviour
         GameEventHub.Print(this.GetType(), " Window Open Animation");
         this.transform.DOMove(new Vector3(4.5f, 0f, 0), 2f)
         .SetEase(Ease.OutQuad);
-        
+
+        // Enable child game object according to the id of DisplayTop, Display
+        // Bottom, DisplayHat, etc.
+        Transform temp = this.gameObject.transform;
+        if(temp.childCount > 0)
+        {
+            temp.GetChild(GameEventHub.id - 1).gameObject.SetActive(true);
+        }
     }
 
     // Listen to Mouse Down Event of its Inner Item like a t-shirt of Top
@@ -26,5 +33,12 @@ public class WindowOpenClose : MonoBehaviour
         GameEventHub.Print(this.GetType()," Window Close Animation");
         this.transform.DOMove(new Vector3(20f, 0f, 0), 2f)
         .SetEase(Ease.OutQuad);
+
+        // Disable child game object according to the id of DisplayTop, Display
+        Transform temp = this.gameObject.transform;
+        if (temp.childCount > 0)
+        {
+            temp.GetChild(GameEventHub.id - 1).gameObject.SetActive(false);
+        }
     }
 }
