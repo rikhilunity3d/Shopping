@@ -24,6 +24,7 @@ public class ItemClickHandler : MonoBehaviour
     private void OnMouseDown()
     {
         GameEventHub.Print(this.GetType(), this.gameObject.name);
+        this.gameObject.GetComponent<EventListener>().enabled = true;
         this.EventItemPicked.Raise();
 
        
@@ -70,8 +71,9 @@ public class ItemClickHandler : MonoBehaviour
     void OnCompleteAnimation()
     {
         this.gameObject.transform.parent = GameEventHub.GOJarBack.transform;
+        this.gameObject.GetComponent<EventListener>().enabled = false;
         // Close the Window
-        EventWindowClose.Raise();
+        this.EventWindowClose.Raise();
 
     }    
 
