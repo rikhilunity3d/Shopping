@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -14,8 +13,6 @@ public class ItemClickHandler : MonoBehaviour
 
     PathType pathType = PathType.CatmullRom;
 
-    
-
     private void Awake()
     {
         SetAnimationPathPoints(AnimationPathPoints);
@@ -27,11 +24,8 @@ public class ItemClickHandler : MonoBehaviour
         this.gameObject.GetComponent<EventListener>().enabled = true;
         this.EventItemPicked.Raise();
         //this.OnMouseUp();
-        
-        
-
-       
     }
+
     private void OnMouseUp()
     {
         GameEventHub.Print(this.GetType(), "OnMouseUp EventWindowClose");
@@ -52,8 +46,6 @@ public class ItemClickHandler : MonoBehaviour
                 temp1[index].gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
-
-        
     }
 
 

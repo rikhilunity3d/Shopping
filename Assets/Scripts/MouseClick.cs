@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -29,6 +27,7 @@ public class MouseClick : MonoBehaviour
 
         this.childGO.transform.DOPath(GameEventHub.GetAnimationPathPoints(), GameEventHub.animationPathPoints.Count, this.pathType)
             .SetEase(Ease.OutQuad)
+            .SetSpeedBased(true)
             .OnComplete(OnCompleteAnimation);
 
     }
