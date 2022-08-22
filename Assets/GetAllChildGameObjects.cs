@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GetAllChildGameObjects : MonoBehaviour
 {
+    [SerializeField]
+    GameEvent EventJarInAnimation;
     private void Awake()
     {
         GameEventHub.Print(this.GetType(), " OnAwake");
@@ -22,5 +24,10 @@ public class GetAllChildGameObjects : MonoBehaviour
             }
             
         }
+    }
+
+    private void Start()
+    {
+        EventJarInAnimation.Raise();
     }
 }

@@ -27,6 +27,10 @@ public class DisplayItemClickHandler : MonoBehaviour
 
     private void DisableBoxColliderOnGameObjects()
     {
+        // Added clicked Display Item here and we will use below list to disable
+        // collider of clicked Items in ItemClickHandler script.
+        GameEventHub.listOfClickedGameObject.Add(GameEventHub.go);
+
         for (int i = 0; i < GameEventHub.listOfGameObject.Count; i++)
         {
             GameEventHub.listOfGameObject[i].GetComponent<BoxCollider2D>().enabled = false;

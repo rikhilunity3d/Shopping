@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 55272144}
   - component: {fileID: 55272145}
   - component: {fileID: 55272146}
+  - component: {fileID: 55272147}
   m_Layer: 0
   m_Name: Bottom4 (with Script)
   m_TagString: Untagged
@@ -434,6 +435,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &55272147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55272142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &62459395
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +478,7 @@ GameObject:
   - component: {fileID: 62459397}
   - component: {fileID: 62459398}
   - component: {fileID: 62459399}
+  - component: {fileID: 62459400}
   m_Layer: 0
   m_Name: Shoes5 (with Script)
   m_TagString: Untagged
@@ -557,6 +590,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &62459400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62459395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &92424178
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +960,7 @@ GameObject:
   - component: {fileID: 124390100}
   - component: {fileID: 124390101}
   - component: {fileID: 124390102}
+  - component: {fileID: 124390103}
   m_Layer: 0
   m_Name: Top2 (with Script)
   m_TagString: Untagged
@@ -1007,6 +1072,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &124390103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124390098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &153653966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1115,7 @@ GameObject:
   - component: {fileID: 153653968}
   - component: {fileID: 153653969}
   - component: {fileID: 153653970}
+  - component: {fileID: 153653971}
   m_Layer: 0
   m_Name: Glasses5 (with Script)
   m_TagString: Untagged
@@ -1130,6 +1227,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &153653971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153653966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &157756799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2320,7 @@ GameObject:
   - component: {fileID: 273222631}
   - component: {fileID: 273222632}
   - component: {fileID: 273222633}
+  - component: {fileID: 273222634}
   m_Layer: 0
   m_Name: Glasses1 (with Script)
   m_TagString: Untagged
@@ -2303,6 +2432,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &273222634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273222629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &295740170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,6 +2475,7 @@ GameObject:
   - component: {fileID: 295740172}
   - component: {fileID: 295740173}
   - component: {fileID: 295740174}
+  - component: {fileID: 295740175}
   m_Layer: 0
   m_Name: Hat1 (with Script)
   m_TagString: Untagged
@@ -2426,6 +2587,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &295740175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295740170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &296125927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,6 +2800,7 @@ GameObject:
   - component: {fileID: 319145749}
   - component: {fileID: 319145750}
   - component: {fileID: 319145751}
+  - component: {fileID: 319145752}
   m_Layer: 0
   m_Name: Top5 (with Script)
   m_TagString: Untagged
@@ -2719,6 +2912,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &319145752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319145747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &351059352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,6 +2955,7 @@ GameObject:
   - component: {fileID: 351059354}
   - component: {fileID: 351059355}
   - component: {fileID: 351059356}
+  - component: {fileID: 351059357}
   m_Layer: 0
   m_Name: Bottom2 (with Script)
   m_TagString: Untagged
@@ -2842,6 +3067,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &351059357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351059352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &366607019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,6 +3274,7 @@ GameObject:
   - component: {fileID: 370098019}
   - component: {fileID: 370098020}
   - component: {fileID: 370098021}
+  - component: {fileID: 370098022}
   m_Layer: 0
   m_Name: Bottom5 (with Script)
   m_TagString: Untagged
@@ -3129,6 +3386,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &370098022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370098017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &379512792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,8 +3672,8 @@ GameObject:
   m_Component:
   - component: {fileID: 396317789}
   - component: {fileID: 396317788}
-  - component: {fileID: 396317791}
   - component: {fileID: 396317790}
+  - component: {fileID: 396317791}
   m_Layer: 0
   m_Name: ApparelsBackground (with Script)
   m_TagString: Untagged
@@ -5187,6 +5475,7 @@ GameObject:
   - component: {fileID: 628854365}
   - component: {fileID: 628854366}
   - component: {fileID: 628854367}
+  - component: {fileID: 628854368}
   m_Layer: 0
   m_Name: Bottom1 (with Script)
   m_TagString: Untagged
@@ -5298,6 +5587,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &628854368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628854363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &636373689
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,6 +6198,7 @@ GameObject:
   - component: {fileID: 714397642}
   - component: {fileID: 714397643}
   - component: {fileID: 714397644}
+  - component: {fileID: 714397645}
   m_Layer: 0
   m_Name: Hat2 (with Script)
   m_TagString: Untagged
@@ -5989,6 +6310,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &714397645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714397640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &736885306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,6 +6748,7 @@ GameObject:
   - component: {fileID: 786848179}
   - component: {fileID: 786848180}
   - component: {fileID: 786848181}
+  - component: {fileID: 786848182}
   m_Layer: 0
   m_Name: Shoes1 (with Script)
   m_TagString: Untagged
@@ -6507,6 +6860,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &786848182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786848177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &791362865
 GameObject:
   m_ObjectHideFlags: 0
@@ -7658,6 +8042,7 @@ GameObject:
   - component: {fileID: 965196338}
   - component: {fileID: 965196339}
   - component: {fileID: 965196340}
+  - component: {fileID: 965196341}
   m_Layer: 0
   m_Name: Top1 (with Script)
   m_TagString: Untagged
@@ -7769,6 +8154,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &965196341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965196336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &984743855
 GameObject:
   m_ObjectHideFlags: 0
@@ -8562,6 +8990,7 @@ GameObject:
   - component: {fileID: 1192124661}
   - component: {fileID: 1192124662}
   - component: {fileID: 1192124663}
+  - component: {fileID: 1192124664}
   m_Layer: 0
   m_Name: Glasses2 (with Script)
   m_TagString: Untagged
@@ -8673,6 +9102,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1192124664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192124659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1195545474
 GameObject:
   m_ObjectHideFlags: 0
@@ -9006,6 +9466,7 @@ GameObject:
   - component: {fileID: 1224562559}
   - component: {fileID: 1224562560}
   - component: {fileID: 1224562561}
+  - component: {fileID: 1224562562}
   m_Layer: 0
   m_Name: Bottom3 (with Script)
   m_TagString: Untagged
@@ -9117,6 +9578,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1224562562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224562557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1255324925
 GameObject:
   m_ObjectHideFlags: 0
@@ -9410,6 +9902,7 @@ GameObject:
   - component: {fileID: 1329368443}
   - component: {fileID: 1329368444}
   - component: {fileID: 1329368445}
+  - component: {fileID: 1329368446}
   m_Layer: 0
   m_Name: Glasses3 (with Script)
   m_TagString: Untagged
@@ -9521,6 +10014,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1329368446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329368441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1332385529
 GameObject:
   m_ObjectHideFlags: 0
@@ -9896,6 +10420,7 @@ GameObject:
   - component: {fileID: 1393742934}
   - component: {fileID: 1393742935}
   - component: {fileID: 1393742936}
+  - component: {fileID: 1393742937}
   m_Layer: 0
   m_Name: Top4 (with Script)
   m_TagString: Untagged
@@ -10007,6 +10532,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1393742937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393742932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1403826481
 GameObject:
   m_ObjectHideFlags: 0
@@ -10560,6 +11116,7 @@ GameObject:
   - component: {fileID: 1445946868}
   - component: {fileID: 1445946869}
   - component: {fileID: 1445946870}
+  - component: {fileID: 1445946871}
   m_Layer: 0
   m_Name: Shoes3 (with Script)
   m_TagString: Untagged
@@ -10671,6 +11228,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1445946871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445946866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1456494037
 GameObject:
   m_ObjectHideFlags: 0
@@ -12441,6 +13029,7 @@ GameObject:
   - component: {fileID: 1659708261}
   - component: {fileID: 1659708262}
   - component: {fileID: 1659708263}
+  - component: {fileID: 1659708264}
   m_Layer: 0
   m_Name: Shoes4 (with Script)
   m_TagString: Untagged
@@ -12552,6 +13141,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1659708264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659708259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1668578122
 GameObject:
   m_ObjectHideFlags: 0
@@ -12941,6 +13561,7 @@ GameObject:
   - component: {fileID: 1767143470}
   - component: {fileID: 1767143471}
   - component: {fileID: 1767143472}
+  - component: {fileID: 1767143473}
   m_Layer: 0
   m_Name: Hat3 (with Script)
   m_TagString: Untagged
@@ -13052,6 +13673,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1767143473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767143468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1773172753
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,6 +14116,7 @@ GameObject:
   - component: {fileID: 1819181456}
   - component: {fileID: 1819181457}
   - component: {fileID: 1819181458}
+  - component: {fileID: 1819181459}
   m_Layer: 0
   m_Name: Glasses4 (with Script)
   m_TagString: Untagged
@@ -13575,6 +14228,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1819181459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819181454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1828443470
 GameObject:
   m_ObjectHideFlags: 0
@@ -14135,6 +14819,7 @@ GameObject:
   - component: {fileID: 1905365462}
   - component: {fileID: 1905365463}
   - component: {fileID: 1905365464}
+  - component: {fileID: 1905365465}
   m_Layer: 0
   m_Name: Hat4 (with Script)
   m_TagString: Untagged
@@ -14246,6 +14931,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1905365465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905365460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1905442416
 GameObject:
   m_ObjectHideFlags: 0
@@ -14506,7 +15222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925680855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.25, y: -1.55, z: 0}
+  m_LocalPosition: {x: -20, y: -1.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 261053243}
@@ -14651,6 +15367,7 @@ GameObject:
   - component: {fileID: 1935436897}
   - component: {fileID: 1935436898}
   - component: {fileID: 1935436899}
+  - component: {fileID: 1935436900}
   m_Layer: 0
   m_Name: Shoes2 (with Script)
   m_TagString: Untagged
@@ -14762,6 +15479,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &1935436900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935436895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1950083500
 GameObject:
   m_ObjectHideFlags: 0
@@ -15418,6 +16166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9103f3bba60094e8e95edc00bb51ec01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EventJarInAnimation: {fileID: 11400000, guid: da9bc7b98818847a1b0a66de0d59c891, type: 2}
 --- !u!1 &2088351561
 GameObject:
   m_ObjectHideFlags: 0
@@ -15430,6 +16179,7 @@ GameObject:
   - component: {fileID: 2088351563}
   - component: {fileID: 2088351564}
   - component: {fileID: 2088351565}
+  - component: {fileID: 2088351566}
   m_Layer: 0
   m_Name: Top3 (with Script)
   m_TagString: Untagged
@@ -15541,6 +16291,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &2088351566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088351561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2093544853
 GameObject:
   m_ObjectHideFlags: 0
@@ -15670,6 +16451,7 @@ GameObject:
   - component: {fileID: 2100032843}
   - component: {fileID: 2100032844}
   - component: {fileID: 2100032845}
+  - component: {fileID: 2100032846}
   m_Layer: 0
   m_Name: Hat5 (with Script)
   m_TagString: Untagged
@@ -15781,6 +16563,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventWindowClose: {fileID: 11400000, guid: 2f9e5554426824846ab34795ffc93f34, type: 2}
+  EventItemPicked: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  AnimationPathPoints:
+  - {fileID: 1925680855}
+--- !u!114 &2100032846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100032841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec985e8473bb417db2b7712617030c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6d324f1a5f7f47db8b9a19e34fea98c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965196340}
+        m_TargetAssemblyTypeName: ItemClickHandler, Assembly-CSharp
+        m_MethodName: MoveGameObjectAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2105975879
 GameObject:
   m_ObjectHideFlags: 0

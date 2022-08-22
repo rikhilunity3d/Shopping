@@ -22,6 +22,7 @@ public static class GameEventHub
     #region ApparelsStage
     public static int id;
     public static List<GameObject> listOfGameObject = new List<GameObject>();
+    public static List<GameObject> listOfClickedGameObject = new List<GameObject>();
     #endregion
 
     public static Vector3[] GetAnimationPathPoints()
