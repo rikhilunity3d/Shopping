@@ -16,7 +16,7 @@ public class ItemClickHandler : MonoBehaviour
 
     
 
-    private void OnEnable()
+    private void Awake()
     {
         SetAnimationPathPoints(AnimationPathPoints);
     }
@@ -26,6 +26,9 @@ public class ItemClickHandler : MonoBehaviour
         GameEventHub.Print(this.GetType(), this.gameObject.name);
         this.gameObject.GetComponent<EventListener>().enabled = true;
         this.EventItemPicked.Raise();
+        //this.OnMouseUp();
+        
+        
 
        
     }
@@ -58,8 +61,11 @@ public class ItemClickHandler : MonoBehaviour
     {
         if(GameEventHub.animationPathPoints.Count>0)
         {
-            this.gameObject.transform.DOPath(GameEventHub.GetAnimationPathPoints(), GameEventHub.animationPathPoints.Count, this.pathType)
+            this.gameObject.transform.DOPath(GameEventHub.GetAnimationPathPoints(),
+                GameEventHub.animationPathPoints.Count,
+                this.pathType,PathMode.TopDown2D)
             .SetEase(Ease.OutQuad)
+            .SetSpeedBased(true)
             .OnComplete(OnCompleteAnimation);
         }
         else
@@ -70,11 +76,11 @@ public class ItemClickHandler : MonoBehaviour
 
     void OnCompleteAnimation()
     {
-        this.gameObject.transform.parent = GameEventHub.GOJarBack.transform;
-        this.gameObject.GetComponent<EventListener>().enabled = false;
         // Close the Window
         this.EventWindowClose.Raise();
 
+        this.gameObject.transform.parent = GameEventHub.GOJarBack.transform;
+        this.gameObject.GetComponent<EventListener>().enabled = false;
     }    
 
     private void SetAnimationPathPoints(List<GameObject> animationPathPoints)
