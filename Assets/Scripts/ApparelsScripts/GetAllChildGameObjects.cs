@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent (typeof(SpriteRenderer))]
 public class GetAllChildGameObjects : MonoBehaviour
 {
     [SerializeField]
@@ -17,10 +18,8 @@ public class GetAllChildGameObjects : MonoBehaviour
                     GameEventHub.listOfGameObject.Add(temp.GetChild(i).gameObject);
                     GameEventHub.Print(this.GetType(), " Adding "+
                     temp.GetChild(i).gameObject.name +" to "+ "GameEventHub.listOfGameObject");
-                }
-                
-            }
-            
+                }   
+            }   
         }
     }
 
