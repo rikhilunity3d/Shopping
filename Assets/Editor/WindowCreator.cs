@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEditor;
 
-public class DisplayItemParentCreator : EditorWindow
+public class WindowCreator : EditorWindow
 {
-
     string enterName = "";
     int objectId = 1;
     Sprite displaySprite;
     GameObject objectToCreate;
     SetCameraOrthographicSizeAccordingToBackground parentGameObject;
 
-    [MenuItem("Tools/CreateBackground/CreateDisplayParentItem")]
+    [MenuItem("Tools/CreateBackground/CreateWindow")]
     public static void ShowWindow()
     {
-        GetWindow(typeof(DisplayItemParentCreator));
+        GetWindow(typeof(WindowCreator));
     }
 
     private void OnGUI()
@@ -28,7 +27,7 @@ public class DisplayItemParentCreator : EditorWindow
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 
-        if (GUILayout.Button("Create Display Item"))
+        if (GUILayout.Button("Create Window"))
         {
             CreateGameObject();
         }
@@ -50,10 +49,10 @@ public class DisplayItemParentCreator : EditorWindow
             objectToCreate = new GameObject { name = enterName };
             objectToCreate.transform.parent = parentGameObject.transform;
             objectToCreate.transform.position = new Vector3(0f, 0f, 0f);
-            objectToCreate.AddComponent<GetAllChildGameObjects>();
+            objectToCreate.AddComponent<WindowOpenClose>();
+            objectToCreate.AddComponent<EventListener>();
             objectToCreate.GetComponent<SpriteRenderer>().sprite = displaySprite;
             objectId++;
         }
-
     }
 }

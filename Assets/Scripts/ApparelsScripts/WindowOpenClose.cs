@@ -3,6 +3,7 @@ using DG.Tweening;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(EventListener))]
+[RequireComponent(typeof(EventListener))]
 public class WindowOpenClose : MonoBehaviour
 {
     // Listen to Mouse Down Event of Group of Items like Top Collection Hanger,

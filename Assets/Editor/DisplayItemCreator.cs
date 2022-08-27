@@ -10,7 +10,7 @@ public class DisplayItemCreator : EditorWindow
     GameObject objectToCreate;
     GetAllChildGameObjects parentGameObject;
 
-    [MenuItem("Tools/CreateDisplayItem")]
+    [MenuItem("Tools/CreateBackground/CreateDisplayParentItem/CreateDisplayItem")]
     public static void ShowWindow()
     {
         GetWindow(typeof(DisplayItemCreator));

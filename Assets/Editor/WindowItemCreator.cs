@@ -1,34 +1,34 @@
 using UnityEngine;
 using UnityEditor;
 
-public class DisplayItemParentCreator : EditorWindow
-{
 
+public class WindowItemCreator : EditorWindow
+{
     string enterName = "";
     int objectId = 1;
     Sprite displaySprite;
     GameObject objectToCreate;
-    SetCameraOrthographicSizeAccordingToBackground parentGameObject;
+    GameObject parentGameObject;
 
-    [MenuItem("Tools/CreateBackground/CreateDisplayParentItem")]
+    [MenuItem("Tools/CreateBackground/CreateWindow/CreateWindowItem")]
     public static void ShowWindow()
     {
-        GetWindow(typeof(DisplayItemParentCreator));
+        GetWindow(typeof(WindowItemCreator));
     }
 
     private void OnGUI()
     {
         GUILayout.Label("Spaw New Object", EditorStyles.boldLabel);
 
-        enterName = EditorGUILayout.TextField("Enter Name:", enterName);
+        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite),true) as Sprite;
 
-        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite)) as Sprite;
+        enterName = EditorGUILayout.TextField("Enter Name:", displaySprite?.name.ToString());
 
-        parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground)) as SetCameraOrthographicSizeAccordingToBackground;
+        parentGameObject = EditorGUILayout.ObjectField("Parent GO:",parentGameObject, typeof(GameObject),true) as GameObject;
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 
-        if (GUILayout.Button("Create Display Item"))
+        if (GUILayout.Button("Create Window"))
         {
             CreateGameObject();
         }
@@ -38,22 +38,21 @@ public class DisplayItemParentCreator : EditorWindow
         if (enterName == string.Empty)
         {
             EditorGUILayout.HelpBox("Error: Please enter a gameobject name to be created", MessageType.Error);
-
         }
         if (parentGameObject == null)
         {
             EditorGUILayout.HelpBox("Error: Please enter a parent gameobject", MessageType.Error);
-
         }
         else
         {
             objectToCreate = new GameObject { name = enterName };
             objectToCreate.transform.parent = parentGameObject.transform;
             objectToCreate.transform.position = new Vector3(0f, 0f, 0f);
-            objectToCreate.AddComponent<GetAllChildGameObjects>();
+            objectToCreate.AddComponent<ItemClickHandler>();
+            objectToCreate.GetComponent<EventListener>().enabled = false;
             objectToCreate.GetComponent<SpriteRenderer>().sprite = displaySprite;
+            objectToCreate.GetComponent<BoxCollider2D>().isTrigger = true;
             objectId++;
         }
-
     }
 }
