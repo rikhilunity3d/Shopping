@@ -13,8 +13,8 @@ public class JarAnimation : MonoBehaviour
     public void JarInAnimation()
     {
         print(this.GetType().FullName + " Jar In Animation");
-
-        this.transform.DOMove(new Vector3(-4.44999981f, -0.660000026f, 0), 2f)
+        
+        this.transform.DOMove(new Vector3(-7.80f, 3.90f, 0), 2f)
             .SetEase(Ease.OutQuad)
             .OnComplete(JarLidAnimation);
         //Vector3(-4.44999981,-0.660000026,0)

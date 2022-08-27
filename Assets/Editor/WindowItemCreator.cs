@@ -51,6 +51,7 @@ public class WindowItemCreator : EditorWindow
             objectToCreate.AddComponent<ItemClickHandler>();
             objectToCreate.GetComponent<EventListener>().enabled = false;
             objectToCreate.GetComponent<SpriteRenderer>().sprite = displaySprite;
+            objectToCreate.GetComponent<SpriteRenderer>().sortingOrder = 400;
             objectToCreate.GetComponent<BoxCollider2D>().isTrigger = true;
             objectId++;
         }
