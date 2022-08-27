@@ -9,7 +9,7 @@ public class WindowCreator : EditorWindow
     GameObject objectToCreate;
     SetCameraOrthographicSizeAccordingToBackground parentGameObject;
 
-    [MenuItem("Tools/CreateBackground/CreateWindow")]
+    [MenuItem("Tools/CreateWindow")]
     public static void ShowWindow()
     {
         GetWindow(typeof(WindowCreator));
@@ -23,7 +23,8 @@ public class WindowCreator : EditorWindow
 
         displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite)) as Sprite;
 
-        parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground)) as SetCameraOrthographicSizeAccordingToBackground;
+        parentGameObject = EditorGUILayout.ObjectField("Parent GO:",
+            parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground),true) as SetCameraOrthographicSizeAccordingToBackground;
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 

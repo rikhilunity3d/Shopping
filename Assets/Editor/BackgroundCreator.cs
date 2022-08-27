@@ -21,7 +21,7 @@ public class BackgroundCreator : EditorWindow
         
         enterName = EditorGUILayout.TextField("Enter Name:",enterName);
 
-        backgroundSprite = EditorGUILayout.ObjectField("Sprite: ", backgroundSprite, typeof(Sprite)) as Sprite;
+        backgroundSprite = EditorGUILayout.ObjectField("Sprite: ", backgroundSprite, typeof(Sprite),false) as Sprite;
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 

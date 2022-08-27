@@ -10,7 +10,7 @@ public class DisplayItemParentCreator : EditorWindow
     GameObject objectToCreate;
     SetCameraOrthographicSizeAccordingToBackground parentGameObject;
 
-    [MenuItem("Tools/CreateBackground/CreateDisplayParentItem")]
+    [MenuItem("Tools/CreateDisplayParentItem")]
     public static void ShowWindow()
     {
         GetWindow(typeof(DisplayItemParentCreator));
@@ -22,9 +22,9 @@ public class DisplayItemParentCreator : EditorWindow
 
         enterName = EditorGUILayout.TextField("Enter Name:", enterName);
 
-        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite)) as Sprite;
+        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite),false) as Sprite;
 
-        parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground)) as SetCameraOrthographicSizeAccordingToBackground;
+        parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground),true) as SetCameraOrthographicSizeAccordingToBackground;
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 

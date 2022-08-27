@@ -10,7 +10,7 @@ public class DisplayItemCreator : EditorWindow
     GameObject objectToCreate;
     GetAllChildGameObjects parentGameObject;
 
-    [MenuItem("Tools/CreateBackground/CreateDisplayParentItem/CreateDisplayItem")]
+    [MenuItem("Tools/CreateDisplayItem")]
     public static void ShowWindow()
     {
         GetWindow(typeof(DisplayItemCreator));
@@ -22,9 +22,9 @@ public class DisplayItemCreator : EditorWindow
 
         enterName = EditorGUILayout.TextField("Enter Name:", enterName);
 
-        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite)) as Sprite;
+        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite),true) as Sprite;
 
-        parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(GetAllChildGameObjects)) as GetAllChildGameObjects;
+        parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(GetAllChildGameObjects),true) as GetAllChildGameObjects;
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 
