@@ -21,7 +21,7 @@ public class WindowCreator : EditorWindow
 
         enterName = EditorGUILayout.TextField("Enter Name:", enterName);
 
-        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite)) as Sprite;
+        displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite),true) as Sprite;
 
         parentGameObject = EditorGUILayout.ObjectField("Parent GO:",
             parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground),true) as SetCameraOrthographicSizeAccordingToBackground;

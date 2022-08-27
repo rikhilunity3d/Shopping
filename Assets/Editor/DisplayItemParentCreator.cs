@@ -20,9 +20,9 @@ public class DisplayItemParentCreator : EditorWindow
     {
         GUILayout.Label("Spaw New Object", EditorStyles.boldLabel);
 
-        enterName = EditorGUILayout.TextField("Enter Name:", enterName);
-
         displaySprite = EditorGUILayout.ObjectField("Sprite: ", displaySprite, typeof(Sprite),false) as Sprite;
+
+        enterName = EditorGUILayout.TextField("Enter Name:", displaySprite?.name);
 
         parentGameObject = EditorGUILayout.ObjectField("Parent GO:", parentGameObject, typeof(SetCameraOrthographicSizeAccordingToBackground),true) as SetCameraOrthographicSizeAccordingToBackground;
 

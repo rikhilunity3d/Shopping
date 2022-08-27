@@ -18,10 +18,10 @@ public class BackgroundCreator : EditorWindow
     private void OnGUI()
     {
         GUILayout.Label("Spaw New Object", EditorStyles.boldLabel);
-        
-        enterName = EditorGUILayout.TextField("Enter Name:",enterName);
 
         backgroundSprite = EditorGUILayout.ObjectField("Sprite: ", backgroundSprite, typeof(Sprite),false) as Sprite;
+
+        enterName = EditorGUILayout.TextField("Enter Name:", backgroundSprite?.name);
 
         objectId = EditorGUILayout.IntField("Game Object ID", objectId);
 
