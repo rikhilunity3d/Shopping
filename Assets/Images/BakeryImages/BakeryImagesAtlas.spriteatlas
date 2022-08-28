@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BakeryImagesAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 3f9145d09636743fc9258436ce3c5276, type: 3}
+    - {fileID: 2800000, guid: fa9b9f32c5cc24ab8af36ac177cd84cf, type: 3}
+    - {fileID: 2800000, guid: 329f3cc5a159b46ef8784b75cb3dfc67, type: 3}
+    - {fileID: 2800000, guid: 0421833638081427286f11d4b930c5c7, type: 3}
+    - {fileID: 2800000, guid: 9613bfc7b7d054e8c82c27e6b6d6d921, type: 3}
+    - {fileID: 2800000, guid: 4eaa1465962de401587d005beb8f323e, type: 3}
+    - {fileID: 2800000, guid: b57e1daa5195945639f64626eae35852, type: 3}
+    - {fileID: 2800000, guid: 025b16e7921604a9b971fd64fcc81ce1, type: 3}
+    - {fileID: 2800000, guid: 223547e3a05f1463fb5e19b0afb66ad7, type: 3}
+    - {fileID: 2800000, guid: cc61fec4332944451b20f360500e09e3, type: 3}
+    - {fileID: 2800000, guid: bf63b1dd2fd4f43bcbf82d8ce18b492f, type: 3}
+    - {fileID: 2800000, guid: 854e2ec7ef7ac42859c743ba422d5306, type: 3}
+    - {fileID: 2800000, guid: 136b84b533cac47459f1df4e14b753f0, type: 3}
+    - {fileID: 2800000, guid: 3a845467a4a1f43bb8875c3b3a76e2da, type: 3}
+    - {fileID: 2800000, guid: 38f99f97b13c84f60ad61c879b0f293f, type: 3}
+    - {fileID: 2800000, guid: 0fe63993905cf4fb98098e5b87aff941, type: 3}
+    - {fileID: 2800000, guid: 6d38427bbb2dc4e4e9c32b6a4db799a4, type: 3}
+    - {fileID: 2800000, guid: 20928db5dc9ed4562af3eecad5e86e1a, type: 3}
+    - {fileID: 2800000, guid: 20bff2cbf551e40758558f9334cddec9, type: 3}
+    - {fileID: 2800000, guid: b36bec1ff751e435086e00cdcfbb147a, type: 3}
+    - {fileID: 2800000, guid: cb5d06f8a045c43f1832ccf0cab6cbf4, type: 3}
+    - {fileID: 2800000, guid: 617189792c4a840e4b432dbd6127fdc9, type: 3}
+    - {fileID: 2800000, guid: a0ee0217271c948228b762bdeca8c1ee, type: 3}
+    - {fileID: 2800000, guid: 9e1cf6410426c4038b340aa22f488cfb, type: 3}
+    - {fileID: 2800000, guid: b9ac6f29958c842b1b8e816554faed61, type: 3}
+    - {fileID: 2800000, guid: 4d9ae80b157ed4428801a674c265baef, type: 3}
+    - {fileID: 2800000, guid: 0be1db6a56db84f93b0b19207eeb787b, type: 3}
+    - {fileID: 2800000, guid: 15e0a414123c9405ba342d9e55bb9594, type: 3}
+    - {fileID: 2800000, guid: ffb368b11b2a74bc196313cda59f3887, type: 3}
+    - {fileID: 2800000, guid: 93af6c77c26394d878424ca14dd5b10d, type: 3}
+    - {fileID: 2800000, guid: b10a32b92686d44908ebe96c54930f3f, type: 3}
+    - {fileID: 2800000, guid: 04f949b773cce4a818ef9a3fe6d63748, type: 3}
+    - {fileID: 2800000, guid: 49017edc6259f4b86aebd392181016fb, type: 3}
+    - {fileID: 2800000, guid: 1f7ca548803b64d1c9f9fb20b672b5cf, type: 3}
+    - {fileID: 2800000, guid: ec32ca8a3355e4944ab363b2f263a707, type: 3}
+    - {fileID: 2800000, guid: 860e68834b73a47e8925fa4e176c2868, type: 3}
+    - {fileID: 2800000, guid: a7fdaaf6d59744429963371ac434651a, type: 3}
+    - {fileID: 2800000, guid: 8ae29f96da7654b40bd38636e2a6b7dd, type: 3}
+    - {fileID: 2800000, guid: a12b0c6924b0649c78053b6692803b30, type: 3}
+    - {fileID: 2800000, guid: bb5adf31737da4cde935383a8bff856f, type: 3}
+    - {fileID: 2800000, guid: 9e2f4756bacca4d7daa155c51abc0b80, type: 3}
+    - {fileID: 2800000, guid: 4c6566eda81b640aba9135749829bfd4, type: 3}
+    - {fileID: 2800000, guid: 59ef1292deffb431cae9206102cfa367, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3f9145d09636743fc9258436ce3c5276, type: 3}
+  - {fileID: 21300000, guid: bb5adf31737da4cde935383a8bff856f, type: 3}
+  - {fileID: 21300000, guid: 9e1cf6410426c4038b340aa22f488cfb, type: 3}
+  - {fileID: 21300000, guid: ffb368b11b2a74bc196313cda59f3887, type: 3}
+  - {fileID: 21300000, guid: fa9b9f32c5cc24ab8af36ac177cd84cf, type: 3}
+  - {fileID: 21300000, guid: 59ef1292deffb431cae9206102cfa367, type: 3}
+  - {fileID: 21300000, guid: 860e68834b73a47e8925fa4e176c2868, type: 3}
+  - {fileID: 21300000, guid: 0fe63993905cf4fb98098e5b87aff941, type: 3}
+  - {fileID: 21300000, guid: 223547e3a05f1463fb5e19b0afb66ad7, type: 3}
+  - {fileID: 21300000, guid: 15e0a414123c9405ba342d9e55bb9594, type: 3}
+  - {fileID: 21300000, guid: cc61fec4332944451b20f360500e09e3, type: 3}
+  - {fileID: 21300000, guid: 4eaa1465962de401587d005beb8f323e, type: 3}
+  - {fileID: 21300000, guid: 136b84b533cac47459f1df4e14b753f0, type: 3}
+  - {fileID: 21300000, guid: 20928db5dc9ed4562af3eecad5e86e1a, type: 3}
+  - {fileID: 21300000, guid: 329f3cc5a159b46ef8784b75cb3dfc67, type: 3}
+  - {fileID: 21300000, guid: 0421833638081427286f11d4b930c5c7, type: 3}
+  - {fileID: 21300000, guid: 9e2f4756bacca4d7daa155c51abc0b80, type: 3}
+  - {fileID: 21300000, guid: 8ae29f96da7654b40bd38636e2a6b7dd, type: 3}
+  - {fileID: 21300000, guid: a7fdaaf6d59744429963371ac434651a, type: 3}
+  - {fileID: 21300000, guid: a0ee0217271c948228b762bdeca8c1ee, type: 3}
+  - {fileID: 21300000, guid: 3a845467a4a1f43bb8875c3b3a76e2da, type: 3}
+  - {fileID: 21300000, guid: 93af6c77c26394d878424ca14dd5b10d, type: 3}
+  - {fileID: 21300000, guid: 38f99f97b13c84f60ad61c879b0f293f, type: 3}
+  - {fileID: 21300000, guid: 04f949b773cce4a818ef9a3fe6d63748, type: 3}
+  - {fileID: 21300000, guid: 854e2ec7ef7ac42859c743ba422d5306, type: 3}
+  - {fileID: 21300000, guid: 9613bfc7b7d054e8c82c27e6b6d6d921, type: 3}
+  - {fileID: 21300000, guid: 025b16e7921604a9b971fd64fcc81ce1, type: 3}
+  - {fileID: 21300000, guid: 1f7ca548803b64d1c9f9fb20b672b5cf, type: 3}
+  - {fileID: 21300000, guid: cb5d06f8a045c43f1832ccf0cab6cbf4, type: 3}
+  - {fileID: 21300000, guid: b9ac6f29958c842b1b8e816554faed61, type: 3}
+  - {fileID: 21300000, guid: a12b0c6924b0649c78053b6692803b30, type: 3}
+  - {fileID: 21300000, guid: 617189792c4a840e4b432dbd6127fdc9, type: 3}
+  - {fileID: 21300000, guid: b10a32b92686d44908ebe96c54930f3f, type: 3}
+  - {fileID: 21300000, guid: 0be1db6a56db84f93b0b19207eeb787b, type: 3}
+  - {fileID: 21300000, guid: ec32ca8a3355e4944ab363b2f263a707, type: 3}
+  - {fileID: 21300000, guid: b57e1daa5195945639f64626eae35852, type: 3}
+  - {fileID: 21300000, guid: 4d9ae80b157ed4428801a674c265baef, type: 3}
+  - {fileID: 21300000, guid: 6d38427bbb2dc4e4e9c32b6a4db799a4, type: 3}
+  - {fileID: 21300000, guid: 20bff2cbf551e40758558f9334cddec9, type: 3}
+  - {fileID: 21300000, guid: 49017edc6259f4b86aebd392181016fb, type: 3}
+  - {fileID: 21300000, guid: bf63b1dd2fd4f43bcbf82d8ce18b492f, type: 3}
+  - {fileID: 21300000, guid: 4c6566eda81b640aba9135749829bfd4, type: 3}
+  - {fileID: 21300000, guid: b36bec1ff751e435086e00cdcfbb147a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Cake1
+  - Pudding3
+  - DisplayPuddings
+  - Donut5
+  - Cake2
+  - Pudding6
+  - Pastry6
+  - Cupcake4
+  - Cookie3
+  - Donut4
+  - Cookie4
+  - Cake6
+  - Cupcake1
+  - Cupcake6
+  - Cake3
+  - Cake4
+  - Pudding4
+  - Pudding1
+  - Plates
+  - DisplayPastry
+  - Cupcake2
+  - Donut6
+  - Cupcake3
+  - Pastry2
+  - Cookie6
+  - Cake5
+  - Cookie2
+  - Pastry4
+  - DisplayCupcake
+  - Donut1
+  - Pudding2
+  - DisplayDonuts
+  - Pastry1
+  - Donut3
+  - Pastry5
+  - Cookie1
+  - Donut2
+  - Cupcake5
+  - DisplayCakes
+  - Pastry3
+  - Cookie5
+  - Pudding5
+  - Displaycookies
+  m_RenderDataMap: {}
+  m_Tag: BakeryImagesAtlas
+  m_IsVariant: 0

@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RefrigerationImagesAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f9a0eb1453b21461d9e224aeaa5aeb68, type: 3}
+    - {fileID: 2800000, guid: 6d237c1bec638439eb4ab3c4e54e0ab2, type: 3}
+    - {fileID: 2800000, guid: 8ad2df5e8061c44b9910cfdd65bd0043, type: 3}
+    - {fileID: 2800000, guid: ecc06c29e3bc14cdcaeeeb51a48e6803, type: 3}
+    - {fileID: 2800000, guid: 897ca22c78d40404aa23a80273d2273f, type: 3}
+    - {fileID: 2800000, guid: a6e0169ab7a3b40bd8e9ad1ef2b2afef, type: 3}
+    - {fileID: 2800000, guid: 45df583da4f964154afa16c69b087bd2, type: 3}
+    - {fileID: 2800000, guid: 0763c750442f440bcaaeb2d3141cccde, type: 3}
+    - {fileID: 2800000, guid: 1316e4ef12d97427cae36d5fb0639329, type: 3}
+    - {fileID: 2800000, guid: f70044948445141279532dbd4059aed2, type: 3}
+    - {fileID: 2800000, guid: 1757482e5ddf847719d1b7fdba04b8ff, type: 3}
+    - {fileID: 2800000, guid: e8f009915dbed4a8d80f0ac3c0177da2, type: 3}
+    - {fileID: 2800000, guid: 7970399d5ed054c38bdc49a31ae8f6bd, type: 3}
+    - {fileID: 2800000, guid: f1853247649d04b60a50439934674ab3, type: 3}
+    - {fileID: 2800000, guid: bc22d27c9fdce4b81a39dbf96699ea02, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0763c750442f440bcaaeb2d3141cccde, type: 3}
+  - {fileID: 21300000, guid: e8f009915dbed4a8d80f0ac3c0177da2, type: 3}
+  - {fileID: 21300000, guid: f9a0eb1453b21461d9e224aeaa5aeb68, type: 3}
+  - {fileID: 21300000, guid: f70044948445141279532dbd4059aed2, type: 3}
+  - {fileID: 21300000, guid: f1853247649d04b60a50439934674ab3, type: 3}
+  - {fileID: 21300000, guid: ecc06c29e3bc14cdcaeeeb51a48e6803, type: 3}
+  - {fileID: 21300000, guid: a6e0169ab7a3b40bd8e9ad1ef2b2afef, type: 3}
+  - {fileID: 21300000, guid: 6d237c1bec638439eb4ab3c4e54e0ab2, type: 3}
+  - {fileID: 21300000, guid: 897ca22c78d40404aa23a80273d2273f, type: 3}
+  - {fileID: 21300000, guid: bc22d27c9fdce4b81a39dbf96699ea02, type: 3}
+  - {fileID: 21300000, guid: 45df583da4f964154afa16c69b087bd2, type: 3}
+  - {fileID: 21300000, guid: 7970399d5ed054c38bdc49a31ae8f6bd, type: 3}
+  - {fileID: 21300000, guid: 1757482e5ddf847719d1b7fdba04b8ff, type: 3}
+  - {fileID: 21300000, guid: 8ad2df5e8061c44b9910cfdd65bd0043, type: 3}
+  - {fileID: 21300000, guid: 1316e4ef12d97427cae36d5fb0639329, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - milk
+  - single_jam
+  - basket_back
+  - refrigerator
+  - single_peanut_butter
+  - butter
+  - juice
+  - basket_front
+  - jam
+  - single_milk
+  - ketchup
+  - single_juice
+  - single_butter
+  - basket_handle
+  - peanut_butter
+  m_RenderDataMap: {}
+  m_Tag: RefrigerationImagesAtlas
+  m_IsVariant: 0
