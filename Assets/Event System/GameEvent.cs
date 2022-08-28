@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class GameEvent : ScriptableObject
             _eventListeners[i].OnEventRaise();
         }
     }
+
     public void Register(EventListener listener)
     {
         if (!_eventListeners.Contains(listener))
@@ -31,6 +33,7 @@ public class GameEvent : ScriptableObject
             _eventListeners.Remove(listener);
         }
     }
+
 }
 
 

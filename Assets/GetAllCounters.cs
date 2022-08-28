@@ -31,8 +31,10 @@ public class GetAllCounters : MonoBehaviour
         {
             if(GameEventHub.currentClickCounter.transform.IsChildOf(temp))
             {
-                GameEventHub.Print(this.GetType(), " OpenCounter");
-                GameEventHub.currentClickCounter.SetActive(false);
+                GameEventHub.Print(GetType()," Sibling Index is "+GameEventHub.currentClickCounter.transform.GetSiblingIndex().ToString());
+                GameEventHub.Print(GetType(), " OpenCounter");
+                
+                
             }
         }
     }
