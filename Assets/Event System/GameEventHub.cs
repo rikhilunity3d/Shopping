@@ -23,6 +23,12 @@ public static class GameEventHub
     public static List<GameObject> listOfClickedGameObject = new List<GameObject>();
     #endregion
 
+    #region AllCounters
+    public static List<GameObject> listOfCounters = new List<GameObject>();
+    public static List<GameObject> listOfClickedCounters = new List<GameObject>();
+    public static GameObject currentClickCounter;
+    #endregion
+
     public static Vector3[] GetAnimationPathPoints()
     {
         List<Vector3> animationPathPointsArray = new List<Vector3>();
