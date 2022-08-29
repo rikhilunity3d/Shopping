@@ -24,6 +24,7 @@ public class CharacterController : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        GameEventHub.Print(GetType(), " OnTriggerExit2D " + collision.gameObject.name);
         collision.gameObject.GetComponent<EventListener>().enabled = false;
     }
 
