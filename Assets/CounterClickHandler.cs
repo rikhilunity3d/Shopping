@@ -1,10 +1,9 @@
-using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(EventListener))]
+[RequireComponent(typeof(ShakeAnimation))]
 public class CounterClickHandler : MonoBehaviour
 {
     [SerializeField]

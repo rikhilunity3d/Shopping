@@ -9,16 +9,22 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField]
     GameEvent EventSliderOpenOrClose;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    GameEvent EventElementShake;
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-    
+        if (collision.gameObject.GetComponent<ShakeAnimation>())
+        {
+            GameEventHub.Print(GetType(), " Collide with " + collision.gameObject.name);
+            collision.gameObject.GetComponent<EventListener>().enabled = true;
+            EventElementShake.Raise();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collision.gameObject.GetComponent<EventListener>().enabled = false;
     }
 
     public void ScaleAnimation()
@@ -30,6 +36,7 @@ public class CharacterController : MonoBehaviour
     void ScaleAnimationComplete()
     {
         GameEventHub.Print(this.GetType(), "ScaleAnimationComplete() -> EventSliderOpenOrClose Raised");
+        
         EventSliderOpenOrClose.Raise();
 
     }
