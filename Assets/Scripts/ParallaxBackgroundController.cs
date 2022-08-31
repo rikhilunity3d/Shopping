@@ -4,24 +4,48 @@ using UnityEngine;
 
 public class ParallaxBackgroundController : MonoBehaviour
 {
-    Vector2 move = Vector2.left;
+    Vector2 move;
     [SerializeField]
     private float speed;
     public float Speed { get => speed; set => speed = value; }
 
     void Update()
     {
-        MoveBackground();
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+            GameEventHub.Print(GetType(), "TouchPosition "+ touchPosition.ToString());
+            if (touchPosition.x <0 )
+            {
+                move = Vector2.left;
+                MoveBackground();
+                GameEventHub.Print(GetType(), "In Left Touch");
+            }
+            else
+            {
+                move = Vector2.right;
+                MoveBackground();
+
+                GameEventHub.Print(GetType(), "In Right Touch");
+            }
+        }
+        
     }
 
     public void MoveBackground()
     {
-        this.transform.position = new Vector2((this.transform.position.x +
-            move.x * Speed * Time.deltaTime), this.transform.position.y);
+
+        
         if (this.transform.position.x < -105)
         {
-            this.transform.position = new Vector2(0, 0);
+
+            return;
         }
+        this.transform.position = new Vector2((this.transform.position.x +
+                move.x * Speed * Time.deltaTime), this.transform.position.y);
+
+
     }
 }
 
