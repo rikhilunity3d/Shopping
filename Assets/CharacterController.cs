@@ -21,11 +21,22 @@ public class CharacterController : MonoBehaviour
             collision.gameObject.GetComponent<EventListener>().enabled = true;
             EventElementShake.Raise();
         }
+        else if(collision.gameObject.GetComponent<CartClickHandler>())
+        {
+            gameObject.GetSiblingWithDesireComponent
+                <SetCameraOrthographicSizeAccordingToBackground,
+                ParallaxBackgroundController>();
+            // Change Character Controller Side Face Sprite
+
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         GameEventHub.Print(GetType(), " OnTriggerExit2D " + collision.gameObject.name);
-        collision.gameObject.GetComponent<EventListener>().enabled = false;
+
+        if(collision.gameObject.GetComponent<EventListener>())
+            collision.gameObject.GetComponent<EventListener>().enabled = false;
     }
 
     public void ScaleAnimation()
@@ -39,6 +50,7 @@ public class CharacterController : MonoBehaviour
         GameEventHub.Print(this.GetType(), "ScaleAnimationComplete() -> EventSliderOpenOrClose Raised");
         
         EventSliderOpenOrClose.Raise();
-
     }
+
+    
 }

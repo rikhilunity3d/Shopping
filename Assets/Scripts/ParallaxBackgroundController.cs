@@ -7,6 +7,10 @@ public class ParallaxBackgroundController : MonoBehaviour
     Vector2 move;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private float leftXPos=-90;
+    [SerializeField]
+    private float rightXPos = 10;
     public float Speed { get => speed; set => speed = value; }
 
     void Update()
@@ -35,17 +39,12 @@ public class ParallaxBackgroundController : MonoBehaviour
 
     public void MoveBackground()
     {
-
-        
-        if (this.transform.position.x < -105)
+        if (transform.position.x < leftXPos && move == Vector2.left || transform.position.x > rightXPos && move == Vector2.right) 
         {
-
             return;
         }
-        this.transform.position = new Vector2((this.transform.position.x +
+        transform.position = new Vector2((this.transform.position.x +
                 move.x * Speed * Time.deltaTime), this.transform.position.y);
-
-
     }
 }
 

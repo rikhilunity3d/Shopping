@@ -8,4 +8,13 @@ public static class Extensions
         color.a = alpha;
         sr.color = color;
     }
+
+    public static void GetSiblingWithDesireComponent<P, C>(this GameObject go) where P : MonoBehaviour where C : MonoBehaviour
+    {
+        if (go.GetComponentInParent<P>())
+        {
+            GameEventHub.Print(go.GetType(), "GetSiblingWithDesireComponent ");
+            go.GetComponentInParent<P>().GetComponentInChildren<C>().enabled = true;
+        }
+    }
 }
