@@ -9,6 +9,8 @@ public class GetAllChildGameObjects : MonoBehaviour
     {
         GameEventHub.Print(this.GetType(), " OnAwake");
         var temp = this.gameObject.transform;
+        GameEventHub.listOfGameObject.Clear();
+        GameEventHub.listOfClickedGameObject.Clear();
         if (temp.childCount > 0 )
         {
             for (int i=0;i< temp.childCount;i++)

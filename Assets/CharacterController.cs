@@ -55,6 +55,12 @@ public class CharacterController : MonoBehaviour
 
         if(collision.gameObject.GetComponent<EventListener>())
             collision.gameObject.GetComponent<EventListener>().enabled = false;
+
+        if (collision.gameObject.TryGetComponent(out SpriteRenderer sp))
+        {
+            sp.Fade(0.70f);
+        }
+        
     }
 
     public void ScaleAnimation()

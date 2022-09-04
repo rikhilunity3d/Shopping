@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(EventListener))]
+[RequireComponent(typeof(EventListener))]
 public class GetAllCounters : MonoBehaviour
 {
     Transform temp;
@@ -12,11 +13,11 @@ public class GetAllCounters : MonoBehaviour
         GameEventHub.Print(this.GetType(), " OnAwake");
         if (temp.childCount > 0)
         {
-            for (int i = 0; i < temp.childCount; i++)
+            for (int i = 0; i < temp.childCount-1; i++)
             {
                 if (temp.GetChild(i).GetComponent<ShakeAnimation>())
                 {
-                    GameEventHub.listOfCounters.Add(temp.GetChild(i).gameObject);
+                    GameEventHub.CountersExceptCashCounter.Add(temp.GetChild(i).gameObject);
                     GameEventHub.Print(this.GetType(), " Adding " +
                     temp.GetChild(i).gameObject.name + " to " + "GameEventHub.listOfCounters");
                 }
@@ -24,6 +25,13 @@ public class GetAllCounters : MonoBehaviour
         }
     }
 
+    public void EnableCashCounter()
+    {
+        GameEventHub.Print(GetType(), " Listner Enable Cash Counter");
+            //Enable Billing Counter Here
+            temp.GetChild(temp.childCount-1).GetComponent<BoxCollider2D>().enabled = true;
+        
+    }
     public void OpenCounter()
     {
         

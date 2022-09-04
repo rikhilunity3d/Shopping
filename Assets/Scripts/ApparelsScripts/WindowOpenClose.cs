@@ -6,6 +6,8 @@ using DG.Tweening;
 [RequireComponent(typeof(EventListener))]
 public class WindowOpenClose : MonoBehaviour
 {
+    [SerializeField]
+    GameEvent EventLevelComplete;
     // Listen to Mouse Down Event of Group of Items like Top Collection Hanger,
     // like Hat Collection, like Shoes Collection, etc.
     public void WindowOpen()
@@ -41,5 +43,11 @@ public class WindowOpenClose : MonoBehaviour
             temp.GetChild(GameEventHub.id - 1).gameObject.SetActive(false);
         }
 
+        GameEventHub.Print(GetType(),""+GameEventHub.listOfGameObject.Count+" " + GameEventHub.listOfClickedGameObject.Count);
+        if(GameEventHub.listOfClickedGameObject.Count == GameEventHub.listOfGameObject.Count)
+        {
+            GameEventHub.Print(this.GetType(), " Level Compelete");
+            EventLevelComplete.Raise();
+        }
     }
 }

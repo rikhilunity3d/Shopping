@@ -8,7 +8,9 @@ public class OpenCloseRespectiveCounter : MonoBehaviour
         GameEventHub.Print(GetType(), "Enable Respective Counter");
         //transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.SetActive(true);
 
-        if(transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.activeInHierarchy)
+        GameEventHub.Print(GetType(), transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.name);
+
+        if (transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.activeInHierarchy)
         {
             transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.SetActive(false);
         }

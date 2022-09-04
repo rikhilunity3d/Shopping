@@ -73,7 +73,6 @@ public class ItemClickHandler : MonoBehaviour
     {
         // Close the Window
         this.EventWindowClose.Raise();
-
         this.gameObject.transform.parent = GameEventHub.GOJarBack.transform;
         this.gameObject.GetComponent<EventListener>().enabled = false;
     }    

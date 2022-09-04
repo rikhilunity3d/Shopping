@@ -29,8 +29,8 @@ public static class GameEventHub
 
 
     #region AllCounters
-    public static List<GameObject> listOfCounters = new List<GameObject>();
-    public static List<GameObject> listOfClickedCounters = new List<GameObject>();
+    public static List<GameObject> CountersExceptCashCounter = new List<GameObject>();
+    public static List<GameObject> VisitedCountersExceptCashCounter = new List<GameObject>();
     public static GameObject currentClickCounter;
     #endregion
 

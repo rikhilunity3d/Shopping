@@ -92,7 +92,6 @@ public class Choclates : MonoBehaviour
         print(this.GetType().Name + " Level is now Completed");
         //EventJarOutAnimation.Raise();
         EventJarLidInAnimation.Raise();
-        gameObject.SetActive(false);
         //Enable Shop GameObject
         UIManager.Instance.EnableNextButton(true);
     }
