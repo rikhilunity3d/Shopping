@@ -13,22 +13,40 @@ public class CharacterController : MonoBehaviour
     [SerializeField]
     GameEvent EventElementShake;
 
+    private void Start()
+    {
+        GameEventHub.GOShop = GetComponentInParent<SetCameraOrthographicSizeAccordingToBackground>().gameObject;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<ShakeAnimation>())
+        if(collision.TryGetComponent(out ShakeAnimation shakeAnimation))
         {
-            GameEventHub.Print(GetType(), " Collide with " + collision.gameObject.name);
-            collision.gameObject.GetComponent<EventListener>().enabled = true;
+            if(shakeAnimation.TryGetComponent(out EventListener ev))
+            {
+                ev.enabled = true;
+            }
             EventElementShake.Raise();
         }
-        else if(collision.gameObject.GetComponent<CartClickHandler>())
+
+        if(collision.TryGetComponent(out CartClickHandler cartClickHandler))
         {
             gameObject.GetSiblingWithDesireComponent
                 <SetCameraOrthographicSizeAccordingToBackground,
                 ParallaxBackgroundController>();
-            // Change Character Controller Side Face Sprite
-
         }
+
+        if(collision.TryGetComponent(out ShoppingList shoppingList))
+        {
+            shoppingList.EnableShoppingListPanel();
+
+            if (shoppingList.TryGetComponent(out BoxCollider2D boxCollider2D))
+                boxCollider2D.enabled = false;
+            
+            gameObject.GetSiblingWithDesireComponent
+                <SetCameraOrthographicSizeAccordingToBackground,
+                ParallaxBackgroundController>();
+        }   
+        
 
     }
     private void OnTriggerExit2D(Collider2D collision)

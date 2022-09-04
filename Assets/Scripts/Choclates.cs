@@ -38,8 +38,6 @@ public class Choclates : MonoBehaviour
     
     private void OnEnable()
     {
-        SetCameraOrthographicSize();
-
         _chocolatesIndex = GetIndexsForChoice(noOfChoice);
 
         _chocolatesToBuy = GetChocolatesFromIndex(_chocolatesIndex);
@@ -94,8 +92,9 @@ public class Choclates : MonoBehaviour
         print(this.GetType().Name + " Level is now Completed");
         //EventJarOutAnimation.Raise();
         EventJarLidInAnimation.Raise();
-
         gameObject.SetActive(false);
+        //Enable Shop GameObject
+        UIManager.Instance.EnableNextButton(true);
     }
 
     
@@ -152,13 +151,7 @@ public class Choclates : MonoBehaviour
         }
     }
     
-    void SetCameraOrthographicSize()
-    {
-        float screenRatio = (float)Screen.width / (float)Screen.height;
-        float targetRatio = levelBackground.bounds.size.x / levelBackground.bounds.size.y;
-        float differenceInSize = targetRatio / screenRatio;
-        Camera.main.orthographicSize = levelBackground.bounds.size.y / 2 * differenceInSize;
-    }
+
 
     [System.Serializable]
     class DepartmentChocolate

@@ -19,6 +19,7 @@ public class CounterClickHandler : MonoBehaviour
     private void OnMouseUp()
     {
         DisableBoxColliderOnGameObjects();
+        DisableShopGameObject();
 
         /*GameEventHub.Print(this.GetType(), "OnMouseUp");
         //Enable Collider of All Counters GameObjects.
@@ -45,13 +46,18 @@ public class CounterClickHandler : MonoBehaviour
     {
         // Added clicked Display Item here and we will use below list to disable
         // collider of clicked Items in ItemClickHandler script.
-        GameEventHub.listOfClickedCounters.Add(GameEventHub.go);
+        
 
         for (int i = 0; i < GameEventHub.listOfCounters.Count; i++)
         {
             GameEventHub.listOfCounters[i].GetComponent<BoxCollider2D>().enabled = false;
             GameEventHub.Print(this.GetType(), " Disabling BoxCollider2D on " + GameEventHub.listOfCounters[i].name);
         }
+    }
+
+    private void DisableShopGameObject()
+    {
+        GameEventHub.GOShop.SetActive(false);
     }
 }
 

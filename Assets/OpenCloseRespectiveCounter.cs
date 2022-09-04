@@ -6,6 +6,17 @@ public class OpenCloseRespectiveCounter : MonoBehaviour
     public void EnableRespectiveCounter()
     {
         GameEventHub.Print(GetType(), "Enable Respective Counter");
-        transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.SetActive(true);
+        //transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.SetActive(true);
+
+        if(transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.activeInHierarchy)
+        {
+            transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.GetChild(GameEventHub.currentClickCounter.transform.GetSiblingIndex()).gameObject.SetActive(true);
+        }
+        
     }
 }
+ 

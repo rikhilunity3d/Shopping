@@ -11,7 +11,7 @@ public class ParallaxBackgroundController : MonoBehaviour
     private float leftXPos=-90;
     [SerializeField]
     private float rightXPos = 10;
-    public float Speed { get => speed; set => speed = value; }
+    public float Speed { get => speed; private set => speed = value; }
 
     void Update()
     {
@@ -19,22 +19,12 @@ public class ParallaxBackgroundController : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            GameEventHub.Print(GetType(), "TouchPosition "+ touchPosition.ToString());
-            if (touchPosition.x <0 )
-            {
-                move = Vector2.left;
-                MoveBackground();
-                GameEventHub.Print(GetType(), "In Left Touch");
-            }
-            else
-            {
-                move = Vector2.right;
-                MoveBackground();
+            //GameEventHub.Print(GetType(), "TouchPosition "+ touchPosition.ToString());
 
-                GameEventHub.Print(GetType(), "In Right Touch");
-            }
+            move = (touchPosition.x >0) ? Vector2.left : Vector2.right;
+              
+            MoveBackground();
         }
-        
     }
 
     public void MoveBackground()
