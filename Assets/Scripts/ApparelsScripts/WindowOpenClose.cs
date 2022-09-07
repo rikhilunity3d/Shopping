@@ -15,7 +15,7 @@ public class WindowOpenClose : MonoBehaviour
         GameEventHub.Print(this.GetType(), "Window Open Function Call");
         // Animation In
         GameEventHub.Print(this.GetType(), " Window Open Animation");
-        this.transform.DOMove(new Vector3(4.5f, 0f, 0), 2f)
+        this.transform.DOMove(new Vector3(5f, 0f, 0), 2f)
         .SetEase(Ease.OutQuad);
 
         // Enable child game object according to the id of DisplayTop, Display
@@ -34,7 +34,7 @@ public class WindowOpenClose : MonoBehaviour
         GameEventHub.Print(this.GetType(), "Window Close Function Call");
         // Animation Out
         GameEventHub.Print(this.GetType()," Window Close Animation");
-        this.transform.DOMove(new Vector3(20f, 0f, 0), 2f)
+        this.transform.DOMove(new Vector3(30f, 0f, 0), 2f)
         .SetEase(Ease.OutQuad);
         // Disable child game object according to the id of DisplayTop, Display
         Transform temp = this.gameObject.transform;

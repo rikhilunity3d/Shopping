@@ -50,5 +50,5 @@ public static class GameEventHub
         Debug.Log(printId.ToString() + ":" + " Script Name: " + type.Name + " -> " + str);
 
     }
-
+    
 }

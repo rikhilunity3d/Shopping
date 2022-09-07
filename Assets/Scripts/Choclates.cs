@@ -43,6 +43,8 @@ public class Choclates : MonoBehaviour
         _chocolatesToBuy = GetChocolatesFromIndex(_chocolatesIndex);
 
         AsignRandomQuantityToBuy(_chocolatesToBuy);
+
+        GameEventHub.animationPathPoints.Clear();
     }
     private void Start()
     {
@@ -56,7 +58,7 @@ public class Choclates : MonoBehaviour
     {
         for (int i = 0; i < animationPathPoints.Count; i++)
         {
-            print("Animation Path Points " + animationPathPoints[i]);
+            GameEventHub.Print(GetType()," Animation Path Points " + animationPathPoints[i]);
             GameEventHub.animationPathPoints.Add(animationPathPoints[i]);
         }
 

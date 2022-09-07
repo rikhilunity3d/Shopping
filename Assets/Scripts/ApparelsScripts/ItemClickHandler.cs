@@ -16,7 +16,7 @@ public class ItemClickHandler : MonoBehaviour
 
     PathType pathType = PathType.CatmullRom;
 
-    private void Awake()
+    private void OnEnable()
     {
         SetAnimationPathPoints(AnimationPathPoints);
     }
@@ -79,6 +79,7 @@ public class ItemClickHandler : MonoBehaviour
 
     private void SetAnimationPathPoints(List<GameObject> animationPathPoints)
     {
+        GameEventHub.animationPathPoints.Clear();
         for (int i = 0; i < animationPathPoints.Count; i++)
         {
             GameEventHub.Print(this.GetType(), "Animation Path Points " + animationPathPoints[i]);
